@@ -45,7 +45,7 @@ input[type="password"] {
 }
 
 .error-border {
-    Page 4 of 8 border-color: red !important;
+    border-color: red !important;
     background-color: #fff0f0;
 }
 
