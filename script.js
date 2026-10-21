@@ -98,4 +98,26 @@ document.addEventListener("DOMContentLoaded", function (){
         }
 
     });
+
+    const thumbs = document.querySelectorAll(".thumb");
+    const caption = document.querySelector("#image-caption");
+
+    thumbs.forEach(function (tile){
+        const selectTile = () => {
+            thumbs.forEach( t => t.classList.remove("expanded"));
+            tile.classList.add("expanded");
+            const cityName = tile.getAttribute("data-city");
+            caption.textContent = `This shot is from ${cityName}`;
+        };
+        tile.addEventListener("click", selectTile);
+
+        tile.addEventListener("keydown", function(event){
+            if (event.key ==="Enter"){
+                selectTile ();
+            }
+        });
+
+    });
 });
+
+
